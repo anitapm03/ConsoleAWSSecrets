@@ -17,7 +17,8 @@ namespace ConsoleAWSSecrets.Helpers
             string region = "us-east-1";
 
             IAmazonSecretsManager client =
-                new AmazonSecretsManagerClient(RegionEndpoint.GetBySystemName(region));
+                new AmazonSecretsManagerClient
+                (RegionEndpoint.GetBySystemName(region));
 
             GetSecretValueRequest request = new GetSecretValueRequest
             {
